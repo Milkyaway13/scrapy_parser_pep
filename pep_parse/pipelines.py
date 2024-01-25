@@ -21,9 +21,6 @@ class PepParsePipeline:
         return item
 
     def close_spider(self, spider):
-        # Опять та же история с тестом,
-        # изначально 3 константы вынес с настройки,
-        # опять стал падать тест, что нет BASE_DIR
         RESULTS_DIR = BASE_DIR / 'results'
         FILE_NAME = f'status_summary_{NOW_FORMATTED}.csv'
         FILE_PATH = RESULTS_DIR / FILE_NAME

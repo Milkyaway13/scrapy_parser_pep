@@ -2,10 +2,11 @@ import datetime as dt
 from pathlib import Path
 
 
+ALLOWED_DOMAINS = 'peps.python.org'
 BASE_DIR = Path(__file__).parent.parent
 BOT_NAME = 'pep_parse'
-SPIDER_MODULES = ['pep_parse.spiders']
 NEWSPIDER_MODULE = 'pep_parse.spiders'
+SPIDER_MODULES = [NEWSPIDER_MODULE]
 ROBOTSTXT_OBEY = True
 UTF_8 = 'utf-8'
 NOW_FORMATTED = dt.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
